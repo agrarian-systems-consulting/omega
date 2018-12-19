@@ -1,0 +1,565 @@
+BEGIN TRANSACTION;
+CREATE TABLE IF NOT EXISTS `VILLAGE` (
+	`ID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`NOM`	TEXT,
+	`ID_REGROUP`	INTEGER,
+	`CAN`	TEXT,
+	`DEP`	TEXT,
+	`PROV`	TEXT,
+	`LAT`	TEXT,
+	`LON`	TEXT,
+	`counter`	TEXT,
+	`fullname`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `USAGE_FC` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`id_usage`	INTEGER,
+	`comment`	TEXT,
+	`id_create`	TEXT,
+	`id_reserv`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `TYPELIEU` (
+	`ID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`TYPE`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `TRACEPT` (
+	`ID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`X`	TEXT,
+	`Y`	TEXT,
+	`ALT`	TEXT,
+	`ID_TRACE`	INTEGER,
+	`DATE`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `TRACE` (
+	`ID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`DATE`	TEXT,
+	`NOM`	TEXT,
+	`INPUT_DATE`	TEXT,
+	`INPUT_ID`	TEXT,
+	`ID_VILLAGE`	TEXT,
+	`ID_ENQUETEUR`	TEXT,
+	`REMARQUE`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `SocioRevenus` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`id_socio`	INTEGER,
+	`id_revenu`	INTEGER,
+	`si_autre`	TEXT,
+	`ordre`	TEXT,
+	`field6`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `SocioEntreprise` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`id_socio`	INTEGER,
+	`type`	TEXT,
+	`detail`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `SOCIO_HA` (
+	`ID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`ID_SOCIO`	INTEGER,
+	`ID_CONST`	INTEGER,
+	`NOMBRE`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `SOCIOECO` (
+	`ID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`ID_VILLAGE`	INTEGER,
+	`ID_ENQUETE`	INTEGER,
+	`DATE`	TEXT,
+	`INPUT_DATE`	TEXT,
+	`INPUT_ID`	TEXT,
+	`POP_HOMME`	TEXT,
+	`POP_FEMME`	TEXT,
+	`POP_ORIGIN`	TEXT,
+	`POP_MENAGE`	TEXT,
+	`POP_rem`	TEXT,
+	`HAB_HABIT`	TEXT,
+	`HAB_ABAND`	TEXT,
+	`HAB_CONST`	TEXT,
+	`HAB_INHAB`	TEXT,
+	`HAB_CUISIN`	TEXT,
+	`HAB_AUTRE`	TEXT,
+	`INF_GROUPE`	TEXT,
+	`INF_GP_VIL`	TEXT,
+	`INF_GP_IS`	TEXT,
+	`INF_ALIM`	TEXT,
+	`ASS_PRESEN`	TEXT,
+	`ASS_rem`	TEXT,
+	`acces`	TEXT,
+	`si_autre_acces`	TEXT,
+	`etat_acces`	TEXT,
+	`entreprise_presen`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `SETTING` (
+	`KEY`	TEXT,
+	`VALUE`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `RESERV_FC` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`EJG`	TEXT,
+	`date_reserv`	TEXT,
+	`ids_village`	INTEGER,
+	`prov`	TEXT,
+	`dep`	TEXT,
+	`canton`	TEXT,
+	`map`	TEXT,
+	`description`	TEXT,
+	`date_accept`	TEXT,
+	`INPUT_DATE`	TEXT,
+	`INPUT_ID`	TEXT,
+	`surf`	TEXT,
+	`num_decision`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `PSG_usage` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`id_psg`	INTEGER,
+	`id_usage`	INTEGER
+);
+CREATE TABLE IF NOT EXISTS `PSG_regle` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`valeur`	TEXT,
+	`actif`	TEXT,
+	`id_PSG`	INTEGER,
+	`partie`	TEXT,
+	`debase`	TEXT,
+	`partie_psg`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `PSG_infra` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`id_psg`	INTEGER,
+	`id_infra_fc`	INTEGER,
+	`custom`	TEXT,
+	`etat_bad`	TEXT,
+	`etat_good`	TEXT,
+	`etat_well`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `PSG_INV_boisoeuvre` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`id_psg`	INTEGER,
+	`Essence`	TEXT,
+	`total`	TEXT,
+	`bloc`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `PSG_INV_PFNL` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`id_psg`	INTEGER,
+	`Produit`	TEXT,
+	`peu`	TEXT,
+	`moyen`	TEXT,
+	`beaucoup`	TEXT,
+	`bloc`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `PSG_INV_Faune` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`id_psg`	INTEGER,
+	`Faune`	TEXT,
+	`peu`	TEXT,
+	`moyen`	TEXT,
+	`beaucoup`	TEXT,
+	`bloc`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `PSG_6_revenu` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`id_psg`	INTEGER,
+	`nom`	TEXT,
+	`pc`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `PSG_6_plan` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`id_psg`	INTEGER,
+	`nom_projet`	TEXT,
+	`petit`	TEXT,
+	`moyen`	TEXT,
+	`grand`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `PSG_6_bareme_other` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`id_psg`	INTEGER,
+	`nom`	TEXT,
+	`salaire`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `PSG_6_bareme` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`id_psg`	INTEGER,
+	`select`	TEXT,
+	`abatteur`	TEXT,
+	`aide_abat`	TEXT,
+	`scieur`	TEXT,
+	`trans`	TEXT,
+	`pepin`	TEXT,
+	`machette`	TEXT,
+	`planteur`	TEXT,
+	`verger`	TEXT,
+	`vendeur`	TEXT,
+	`artisan`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `PSG_5_other_row` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`id_psg_5_other`	INTEGER,
+	`activite`	TEXT,
+	`annee1`	TEXT,
+	`annee2`	TEXT,
+	`annee3`	TEXT,
+	`annee4`	TEXT,
+	`annee5`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `PSG_5_other` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`id_psg`	INTEGER,
+	`annee`	TEXT,
+	`activite`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `PSG_5_boisoeuvre_trees` (
+	`id`	TEXT,
+	`id_boisoeuvre`	TEXT,
+	`num_bloc`	TEXT,
+	`nbr_trees`	TEXT,
+	`annee`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `PSG_5_boisoeuvre` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`id_psg`	INTEGER,
+	`annee`	TEXT,
+	`num_bloc`	TEXT,
+	`nbr_tree_1`	INTEGER,
+	`nbr_tree_2`	INTEGER,
+	`nbr_tree_3`	INTEGER,
+	`nbr_tree_4`	INTEGER,
+	`nbr_tree_5`	INTEGER,
+	`date_reboise`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `PSG_5_agri` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`id_psg`	INTEGER,
+	`annee`	TEXT,
+	`activite`	TEXT,
+	`annee1`	TEXT,
+	`annee2`	TEXT,
+	`annee3`	TEXT,
+	`annee4`	TEXT,
+	`annee5`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `PSG_5_PFNL_reboise` (
+	`id`	TEXT,
+	`id_psg_5_pfnl`	TEXT,
+	`id_pfnl`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `PSG_5_PFNL_cueille` (
+	`id`	TEXT,
+	`id_psg_5_pfnl`	TEXT,
+	`PFNL`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `PSG_5_PFNL` (
+	`id`	TEXT,
+	`id_psg`	TEXT,
+	`annee`	TEXT,
+	`activite1`	TEXT,
+	`activite2`	TEXT,
+	`activite3`	TEXT,
+	`activite4`	TEXT,
+	`activite5`	TEXT,
+	`reboise1`	TEXT,
+	`reboise2`	TEXT,
+	`reboise3`	TEXT,
+	`reboise4`	TEXT,
+	`reboise5`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `PSG_4_reboise` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`id_psg`	INTEGER,
+	`date_reboise`	TEXT,
+	`replant_exploit`	TEXT,
+	`replant_other`	TEXT,
+	`replant_other_ess`	TEXT,
+	`prov_pepiniere`	TEXT,
+	`prov_commerce`	TEXT,
+	`site_reboise`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `PSG_4_other_use` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`id_psg`	INTEGER,
+	`description`	TEXT,
+	`num_activity`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `PSG_4_exploit_other` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`id_exploit`	INTEGER,
+	`nom`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `PSG_4_agro_revenu` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`id_agro`	INTEGER,
+	`culture`	TEXT,
+	`quantite`	TEXT,
+	`unite`	TEXT,
+	`revenu`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `PSG_4_agro_other` (
+	`id`	TEXT,
+	`id_agro`	TEXT,
+	`nom`	TEXT,
+	`pc`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `PSG_4_agro` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`id_psg`	INTEGER,
+	`exp_non_verse`	TEXT,
+	`exp_verse`	TEXT,
+	`exp_verse_pc`	TEXT,
+	`exp_integral`	TEXT,
+	`exp_plant`	TEXT,
+	`exp_plant_pc`	TEXT,
+	`exp_verger`	TEXT,
+	`exp_verger_pc`	TEXT,
+	`exp_non_agro`	TEXT,
+	`exp_non_agro_pc`	TEXT,
+	`produit_cultive`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `PSG_4_PFNL` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`id_psg`	INTEGER,
+	`id_PFNL`	INTEGER,
+	`presence`	TEXT,
+	`revenu`	TEXT,
+	`lieu`	TEXT,
+	`quantite`	TEXT,
+	`organisation`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `PSG` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`ids_village`	INTEGER,
+	`prov`	TEXT,
+	`dep`	TEXT,
+	`canton`	TEXT,
+	`EJG`	TEXT,
+	`surf`	TEXT,
+	`date_soumission`	TEXT,
+	`date_validation`	TEXT,
+	`date_rev_1`	TEXT,
+	`text_rev_1`	TEXT,
+	`date_rev_2`	TEXT,
+	`text_rev_2`	TEXT,
+	`date_rev_3`	TEXT,
+	`text_rev_3`	TEXT,
+	`has_doc_recon`	TEXT,
+	`has_doc_conventio`	TEXT,
+	`date_creation_EJG`	TEXT,
+	`adresse_EJG`	TEXT,
+	`nom_representant_`	TEXT,
+	`map_situation`	TEXT,
+	`limite_nord`	TEXT,
+	`limite_sud`	TEXT,
+	`limite_est`	TEXT,
+	`limite_ouest`	TEXT,
+	`POP_HOMME`	TEXT,
+	`POP_FEMME`	TEXT,
+	`POP_PERSON`	TEXT,
+	`POP_FAMILLE`	TEXT,
+	`map_usage_prior`	TEXT,
+	`is_inv_result_don`	TEXT,
+	`inv_essence_explo`	TEXT,
+	`has_exploit_regie`	TEXT,
+	`has_exploit_ferma`	TEXT,
+	`has_exploit_PFNL`	TEXT,
+	`has_agri`	TEXT,
+	`has_conserv`	TEXT,
+	`has_reboise`	TEXT,
+	`has_autre_usage`	TEXT,
+	`rev_micro_dev`	TEXT,
+	`rev_micro_social`	TEXT,
+	`rev_caisse_secour`	TEXT,
+	`rev_frais_ejg`	TEXT,
+	`rev_remuneration`	TEXT,
+	`rev_achat`	TEXT,
+	`INPUT_DATE`	TEXT,
+	`INPUT_ID`	TEXT,
+	`numAttrib`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `POUVOIR` (
+	`ID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`ID_SOCIO`	INTEGER,
+	`NOM`	TEXT,
+	`FONCTION`	TEXT,
+	`RESIDENCE`	TEXT,
+	`contact`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `PERSON` (
+	`ID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`NOM`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `OTHERGPS` (
+	`ID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`DATE`	TEXT,
+	`ID_ENQUETE`	INTEGER,
+	`REMARQUE`	TEXT,
+	`ID_VILLAGE`	INTEGER,
+	`INPUT_DATE`	TEXT,
+	`INPUT_ID`	TEXT,
+	`ID_TYPE`	INTEGER,
+	`id_gps`	INTEGER
+);
+CREATE TABLE IF NOT EXISTS `OCCUP_AC` (
+	`ID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`ID_NATURE`	INTEGER,
+	`ID_ACTIVIT`	INTEGER,
+	`DETAIL`	TEXT,
+	`ID_OCC_SPA`	TEXT,
+	`ID_PARTIE`	TEXT,
+	`IDS_USAGES`	TEXT,
+	`AGRI_SURF`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `OCCUP` (
+	`ID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`DATE`	TEXT,
+	`ID_ENQUETEUR`	INTEGER,
+	`REMARQUE`	TEXT,
+	`NB_MAISON`	TEXT,
+	`NB_OCCUPANT`	TEXT,
+	`ID_VILLAGE`	TEXT,
+	`DESCRIPTION`	TEXT,
+	`INPUT_DATE`	TEXT,
+	`INPUT_ID`	TEXT,
+	`ID_TYPO`	TEXT,
+	`LIGNAGE`	TEXT,
+	`id_gps`	TEXT,
+	`field14`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `LIGNAGE` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`id_clan`	INTEGER,
+	`nom`	TEXT,
+	`chef`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `INFRA` (
+	`ID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`ID_SOCIO`	INTEGER,
+	`ID_INFRA`	INTEGER,
+	`TERMINE`	TEXT,
+	`ENCOURS`	TEXT,
+	`DELABRE`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `GPS` (
+	`ID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`CODE`	TEXT,
+	`X`	TEXT,
+	`Y`	TEXT,
+	`ALT`	TEXT,
+	`DATE`	TEXT,
+	`import_name`	TEXT,
+	`isImport`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `ETHNIE` (
+	`ID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`ID_SOCIO`	INTEGER,
+	`ID_ETHNIE`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `DICO_USAGE_FC` (
+	`ID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`USAGE`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `DICO_USAGE` (
+	`ID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`USAGE`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `DICO_TYPO` (
+	`ID`	TEXT,
+	`TYPE`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `DICO_PFNL` (
+	`ID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`NOM_PILOTE`	TEXT,
+	`FAMILLE`	TEXT,
+	`NOM_SC`	TEXT,
+	`XKOTA`	TEXT,
+	`XFANG`	TEXT,
+	`XKWELE`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `DICO_PARTIE` (
+	`ID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`PARTIE`	TEXT,
+	`field3`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `DICO_NATURE` (
+	`ID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`A_PRECISER`	TEXT,
+	`NATURE`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `DICO_INFRA_FC` (
+	`ID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`NOM`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `DICO_INFRA` (
+	`ID`	TEXT,
+	`NOM`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `DICO_ETHNIE` (
+	`ID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`NOM`	TEXT,
+	`id_parent`	INTEGER
+);
+CREATE TABLE IF NOT EXISTS `DICO_ESS` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`nom`	TEXT,
+	`nom_latin`	TEXT,
+	`protected`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `DICO_CONSTRUC` (
+	`ID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`TYPE`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `DICO_ACTIVITE` (
+	`ID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`ACTIVITE`	TEXT,
+	`ID_NATURE`	INTEGER,
+	`A_PRECISER`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `CREATE_FC` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`num_dossier`	INTEGER,
+	`EJG`	TEXT,
+	`ids_village`	TEXT,
+	`prov`	TEXT,
+	`dep`	TEXT,
+	`canton`	TEXT,
+	`contact`	TEXT,
+	`date_depot`	TEXT,
+	`date_accept`	TEXT,
+	`map`	TEXT,
+	`limite_nord`	TEXT,
+	`limite_sud`	TEXT,
+	`limite_est`	TEXT,
+	`limite_ouest`	TEXT,
+	`has_doc1`	TEXT,
+	`has_doc2`	TEXT,
+	`has_doc3`	TEXT,
+	`has_doc4`	TEXT,
+	`has_doc5`	TEXT,
+	`has_doc6`	TEXT,
+	`INPUT_DATE`	TEXT,
+	`INPUT_ID`	TEXT,
+	`surf`	TEXT,
+	`num_convention`	TEXT,
+	`remarque`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `CLAN` (
+	`ID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`ID_ETHNIE`	INTEGER,
+	`NOM`	TEXT,
+	`NOMBRE`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `BIBLIO` (
+	`ID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`NOM`	TEXT,
+	`DATE`	TEXT,
+	`KEY`	TEXT
+);
+CREATE TABLE IF NOT EXISTS `ASSOC` (
+	`ID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	`ID_SOCIO`	INTEGER,
+	`ASS_FORMEL`	TEXT,
+	`NOM`	TEXT,
+	`MEMBRE`	TEXT,
+	`CREATION`	TEXT,
+	`LEGALISE`	TEXT,
+	`ACTIVITE`	TEXT
+);
+COMMIT;

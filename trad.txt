@@ -1,0 +1,14 @@
+form activite button add/ button enable groupe
+
+main form activite/expl button enable group/data
+
+territory form : GPS data management
+	ajouter shapafile : labelload
+	remove shapefile : all
+	create shapafile new option, import manaement group box/OR
+	export : all
+	
+resultform :
+	definition : groupbox aleas/quit save button/name label
+	assol : remove/cancel/save
+	idem = perenne/animals/produits/charges.divers etc.. tous les onglets

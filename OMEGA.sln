@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OMEGA", "OMEGA.csproj", "{12D9A611-D84D-4597-BD5D-77DAB8B0ED88}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Omega_Install", "..\Omega_Install\Omega_Install.vdproj", "{4E10CD25-5F40-4A41-8351-6C79F7DB3A7F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+		X86|Any CPU = X86|Any CPU
+		X86|x64 = X86|x64
+		X86|x86 = X86|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12D9A611-D84D-4597-BD5D-77DAB8B0ED88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12D9A611-D84D-4597-BD5D-77DAB8B0ED88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12D9A611-D84D-4597-BD5D-77DAB8B0ED88}.Debug|x64.ActiveCfg = Debug|x64
+		{12D9A611-D84D-4597-BD5D-77DAB8B0ED88}.Debug|x64.Build.0 = Debug|x64
+		{12D9A611-D84D-4597-BD5D-77DAB8B0ED88}.Debug|x86.ActiveCfg = Debug|x86
+		{12D9A611-D84D-4597-BD5D-77DAB8B0ED88}.Debug|x86.Build.0 = Debug|x86
+		{12D9A611-D84D-4597-BD5D-77DAB8B0ED88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12D9A611-D84D-4597-BD5D-77DAB8B0ED88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12D9A611-D84D-4597-BD5D-77DAB8B0ED88}.Release|x64.ActiveCfg = Release|x64
+		{12D9A611-D84D-4597-BD5D-77DAB8B0ED88}.Release|x64.Build.0 = Release|x64
+		{12D9A611-D84D-4597-BD5D-77DAB8B0ED88}.Release|x86.ActiveCfg = Release|x86
+		{12D9A611-D84D-4597-BD5D-77DAB8B0ED88}.Release|x86.Build.0 = Release|x86
+		{12D9A611-D84D-4597-BD5D-77DAB8B0ED88}.X86|Any CPU.ActiveCfg = X86|Any CPU
+		{12D9A611-D84D-4597-BD5D-77DAB8B0ED88}.X86|Any CPU.Build.0 = X86|Any CPU
+		{12D9A611-D84D-4597-BD5D-77DAB8B0ED88}.X86|x64.ActiveCfg = X86|x64
+		{12D9A611-D84D-4597-BD5D-77DAB8B0ED88}.X86|x64.Build.0 = X86|x64
+		{12D9A611-D84D-4597-BD5D-77DAB8B0ED88}.X86|x86.ActiveCfg = X86|x86
+		{12D9A611-D84D-4597-BD5D-77DAB8B0ED88}.X86|x86.Build.0 = X86|x86
+		{4E10CD25-5F40-4A41-8351-6C79F7DB3A7F}.Debug|Any CPU.ActiveCfg = Debug
+		{4E10CD25-5F40-4A41-8351-6C79F7DB3A7F}.Debug|Any CPU.Build.0 = Debug
+		{4E10CD25-5F40-4A41-8351-6C79F7DB3A7F}.Debug|x64.ActiveCfg = Debug
+		{4E10CD25-5F40-4A41-8351-6C79F7DB3A7F}.Debug|x64.Build.0 = Debug
+		{4E10CD25-5F40-4A41-8351-6C79F7DB3A7F}.Debug|x86.ActiveCfg = Debug
+		{4E10CD25-5F40-4A41-8351-6C79F7DB3A7F}.Debug|x86.Build.0 = Debug
+		{4E10CD25-5F40-4A41-8351-6C79F7DB3A7F}.Release|Any CPU.ActiveCfg = Release
+		{4E10CD25-5F40-4A41-8351-6C79F7DB3A7F}.Release|Any CPU.Build.0 = Release
+		{4E10CD25-5F40-4A41-8351-6C79F7DB3A7F}.Release|x64.ActiveCfg = Release
+		{4E10CD25-5F40-4A41-8351-6C79F7DB3A7F}.Release|x64.Build.0 = Release
+		{4E10CD25-5F40-4A41-8351-6C79F7DB3A7F}.Release|x86.ActiveCfg = Release
+		{4E10CD25-5F40-4A41-8351-6C79F7DB3A7F}.Release|x86.Build.0 = Release
+		{4E10CD25-5F40-4A41-8351-6C79F7DB3A7F}.X86|Any CPU.ActiveCfg = X86
+		{4E10CD25-5F40-4A41-8351-6C79F7DB3A7F}.X86|Any CPU.Build.0 = X86
+		{4E10CD25-5F40-4A41-8351-6C79F7DB3A7F}.X86|x64.ActiveCfg = X86
+		{4E10CD25-5F40-4A41-8351-6C79F7DB3A7F}.X86|x64.Build.0 = X86
+		{4E10CD25-5F40-4A41-8351-6C79F7DB3A7F}.X86|x86.ActiveCfg = X86
+		{4E10CD25-5F40-4A41-8351-6C79F7DB3A7F}.X86|x86.Build.0 = X86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E62A5B77-C626-46D1-B835-E03002E16231}
+	EndGlobalSection
+EndGlobal

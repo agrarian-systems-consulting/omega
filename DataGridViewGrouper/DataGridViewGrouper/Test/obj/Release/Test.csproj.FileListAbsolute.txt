@@ -1,0 +1,14 @@
+D:\Data_PAZ\OMEGA\OMEGA\DataGridViewGrouper\DataGridViewGrouper\Test\bin\Release\Test.exe.config
+D:\Data_PAZ\OMEGA\OMEGA\DataGridViewGrouper\DataGridViewGrouper\Test\bin\Release\Test.exe
+D:\Data_PAZ\OMEGA\OMEGA\DataGridViewGrouper\DataGridViewGrouper\Test\bin\Release\Test.pdb
+D:\Data_PAZ\OMEGA\OMEGA\DataGridViewGrouper\DataGridViewGrouper\Test\bin\Release\DataGridViewGrouper.dll
+D:\Data_PAZ\OMEGA\OMEGA\DataGridViewGrouper\DataGridViewGrouper\Test\bin\Release\DataGridViewGrouper.pdb
+D:\Data_PAZ\OMEGA\OMEGA\DataGridViewGrouper\DataGridViewGrouper\Test\bin\Release\DataGridViewGrouper.dll.config
+D:\Data_PAZ\OMEGA\OMEGA\DataGridViewGrouper\DataGridViewGrouper\Test\obj\Release\Test.ExampleWithComponent.resources
+D:\Data_PAZ\OMEGA\OMEGA\DataGridViewGrouper\DataGridViewGrouper\Test\obj\Release\Test.ExampleWithControl.resources
+D:\Data_PAZ\OMEGA\OMEGA\DataGridViewGrouper\DataGridViewGrouper\Test\obj\Release\Test.FormBase.resources
+D:\Data_PAZ\OMEGA\OMEGA\DataGridViewGrouper\DataGridViewGrouper\Test\obj\Release\Test.Properties.Resources.resources
+D:\Data_PAZ\OMEGA\OMEGA\DataGridViewGrouper\DataGridViewGrouper\Test\obj\Release\Test.csproj.GenerateResource.Cache
+D:\Data_PAZ\OMEGA\OMEGA\DataGridViewGrouper\DataGridViewGrouper\Test\obj\Release\Test.csproj.CoreCompileInputs.cache
+D:\Data_PAZ\OMEGA\OMEGA\DataGridViewGrouper\DataGridViewGrouper\Test\obj\Release\Test.exe
+D:\Data_PAZ\OMEGA\OMEGA\DataGridViewGrouper\DataGridViewGrouper\Test\obj\Release\Test.pdb

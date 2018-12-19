@@ -1,0 +1,11 @@
+D:\Data_PAZ\OMEGA\OMEGA\DataGridViewGrouper\DataGridViewGrouper\DataGridViewGrouper\bin\Release\DataGridViewGrouper.dll.config
+D:\Data_PAZ\OMEGA\OMEGA\DataGridViewGrouper\DataGridViewGrouper\DataGridViewGrouper\bin\Release\DataGridViewGrouper.dll
+D:\Data_PAZ\OMEGA\OMEGA\DataGridViewGrouper\DataGridViewGrouper\DataGridViewGrouper\bin\Release\DataGridViewGrouper.pdb
+D:\Data_PAZ\OMEGA\OMEGA\DataGridViewGrouper\DataGridViewGrouper\DataGridViewGrouper\obj\Release\Subro.Controls.DataGridViewGrouperControl.resources
+D:\Data_PAZ\OMEGA\OMEGA\DataGridViewGrouper\DataGridViewGrouper\DataGridViewGrouper\obj\Release\DataGridViewGrouper.Properties.Resources.resources
+D:\Data_PAZ\OMEGA\OMEGA\DataGridViewGrouper\DataGridViewGrouper\DataGridViewGrouper\obj\Release\Subro.Controls.SearchBoxBase.resources
+D:\Data_PAZ\OMEGA\OMEGA\DataGridViewGrouper\DataGridViewGrouper\DataGridViewGrouper\obj\Release\DataGridViewGrouper.csproj.GenerateResource.Cache
+D:\Data_PAZ\OMEGA\OMEGA\DataGridViewGrouper\DataGridViewGrouper\DataGridViewGrouper\obj\Release\DataGridViewGrouper.csproj.CoreCompileInputs.cache
+D:\Data_PAZ\OMEGA\OMEGA\DataGridViewGrouper\DataGridViewGrouper\DataGridViewGrouper\obj\Release\DataGridViewGrouper.dll
+D:\Data_PAZ\OMEGA\OMEGA\DataGridViewGrouper\DataGridViewGrouper\DataGridViewGrouper\obj\Release\DataGridViewGrouper.pdb
+D:\Data_PAZ\OMEGA\OMEGA\DataGridViewGrouper\DataGridViewGrouper\DataGridViewGrouper\obj\Release\DataGridViewGrouper.csprojResolveAssemblyReference.cache

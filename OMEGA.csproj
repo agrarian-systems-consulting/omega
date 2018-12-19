@@ -1,0 +1,943 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{12D9A611-D84D-4597-BD5D-77DAB8B0ED88}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OMEGA</RootNamespace>
+    <AssemblyName>OMEGA</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'X86|AnyCPU'">
+    <OutputPath>bin\X86\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'X86|x64'">
+    <OutputPath>bin\x64\X86\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'X86|x86'">
+    <OutputPath>bin\x86\X86\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon1.0.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>OMEGA.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalDecisions.CrystalReports.Engine.1.0.0\lib\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="DataGridViewGrouper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DataGridViewGrouper\DataGridViewGrouper\DataGridViewGrouper\bin\Release\DataGridViewGrouper.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetZip, Version=1.10.1.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>packages\DotNetZip.1.10.1\lib\net20\DotNetZip.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SamQueLib">
+      <HintPath>..\..\MapVillage\src\Dacefi2\bin\Debug\SamQueLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.86.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\System.Data.SQLite.Core.1.0.108.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.108.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SQLite.EF6.1.0.108.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.86.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SQLite.MSIL.1.0.86.0\lib\net45\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data Classes\ChargeFQuantite.cs" />
+    <Compile Include="Data Classes\CheckData.cs" />
+    <Compile Include="Data Classes\Classification.cs" />
+    <Compile Include="Data Classes\CritereCulture.cs" />
+    <Compile Include="Data Classes\Family.cs" />
+    <Compile Include="Data Classes\MainView.cs" />
+    <Compile Include="Data Classes\ExpenseIncome.cs" />
+    <Compile Include="Data Classes\RepresentDataClass.cs" />
+    <Compile Include="Data Classes\ShowCommunFormResult.cs" />
+    <Compile Include="Data Classes\Territory.cs" />
+    <Compile Include="Data Classes\Troupeaux.cs" />
+    <Compile Include="Data Classes\Variable.cs" />
+    <Compile Include="Forms\Basics data forms\AleasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Basics data forms\AleasForm.Designer.cs">
+      <DependentUpon>AleasForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Basics data forms\ChargesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Basics data forms\ChargesForm.Designer.cs">
+      <DependentUpon>ChargesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Common forms\InfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Common forms\InfoForm.Designer.cs">
+      <DependentUpon>InfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main Forms\VarianteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main Forms\VarianteForm.Designer.cs">
+      <DependentUpon>VarianteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Result forms and user controls\ChargeUsedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Result forms and user controls\ChargeUsedForm.Designer.cs">
+      <DependentUpon>ChargeUsedForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Display set up forms\ColorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Display set up forms\ColorForm.Designer.cs">
+      <DependentUpon>ColorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Basics data forms\ImportGPSDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Basics data forms\ImportGPSDataForm.Designer.cs">
+      <DependentUpon>ImportGPSDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Common forms\NotesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Common forms\NotesForm.Designer.cs">
+      <DependentUpon>NotesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Basics data forms\PeriodeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Basics data forms\PeriodeForm.Designer.cs">
+      <DependentUpon>PeriodeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Basics data forms\PointGPSForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Basics data forms\PointGPSForm.Designer.cs">
+      <DependentUpon>PointGPSForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Result forms and user controls\ActivityChoiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Result forms and user controls\ActivityChoiceForm.Designer.cs">
+      <DependentUpon>ActivityChoiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Result forms and user controls\EtatSortieForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Result forms and user controls\EtatSortieForm.Designer.cs">
+      <DependentUpon>EtatSortieForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Result forms and user controls\user controls\UserControlFinance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Result forms and user controls\user controls\UserControlFinance.Designer.cs">
+      <DependentUpon>UserControlFinance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Result forms and user controls\user controls\UserControlImmoGlobal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Result forms and user controls\user controls\UserControlImmoGlobal.Designer.cs">
+      <DependentUpon>UserControlImmoGlobal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Result forms and user controls\user controls\UserControlImmoPetitMateriel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Result forms and user controls\user controls\UserControlImmoPetitMateriel.Designer.cs">
+      <DependentUpon>UserControlImmoPetitMateriel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Result forms and user controls\user controls\UserControlResultat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Result forms and user controls\user controls\UserControlResultat.Designer.cs">
+      <DependentUpon>UserControlResultat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Result forms and user controls\user controls\UserControlStock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Result forms and user controls\user controls\UserControlStock.Designer.cs">
+      <DependentUpon>UserControlStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Territory Forms\AddShapeFileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Territory Forms\AddShapeFileForm.Designer.cs">
+      <DependentUpon>AddShapeFileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Territory Forms\CreateShapeFileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Territory Forms\CreateShapeFileForm.Designer.cs">
+      <DependentUpon>CreateShapeFileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Territory Forms\ExportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Territory Forms\ExportForm.Designer.cs">
+      <DependentUpon>ExportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Territory Forms\FicheAttributForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Territory Forms\FicheAttributForm.Designer.cs">
+      <DependentUpon>FicheAttributForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Territory Forms\NofileFoundForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Territory Forms\NofileFoundForm.Designer.cs">
+      <DependentUpon>NofileFoundForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Territory Forms\PrintMapForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Territory Forms\PrintMapForm.Designer.cs">
+      <DependentUpon>PrintMapForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Territory Forms\QueryTerritoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Territory Forms\QueryTerritoryForm.Designer.cs">
+      <DependentUpon>QueryTerritoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Territory Forms\RemoveShapeFIleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Territory Forms\RemoveShapeFIleForm.Designer.cs">
+      <DependentUpon>RemoveShapeFIleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Territory Forms\TerritoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Territory Forms\TerritoryForm.Designer.cs">
+      <DependentUpon>TerritoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Basics data forms\TroupeauxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Basics data forms\TroupeauxForm.Designer.cs">
+      <DependentUpon>TroupeauxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Basics data forms\VariableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Basics data forms\VariableForm.Designer.cs">
+      <DependentUpon>VariableForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Territory Forms\UserControlLigne.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Territory Forms\UserControlLigne.Designer.cs">
+      <DependentUpon>UserControlLigne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Territory Forms\UserControlQuery.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Territory Forms\UserControlQuery.Designer.cs">
+      <DependentUpon>UserControlQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Graphs\GraphForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Graphs\GraphForm.Designer.cs">
+      <DependentUpon>GraphForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other Classes\Calcul.cs" />
+    <Compile Include="Other Classes\EventClass.cs" />
+    <Compile Include="Forms\Common forms\CalculForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Common forms\CalculForm.Designer.cs">
+      <DependentUpon>CalculForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Basics data forms\ClassificationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Basics data forms\ClassificationForm.Designer.cs">
+      <DependentUpon>ClassificationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Basics data forms\RecetteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Basics data forms\RecetteForm.Designer.cs">
+      <DependentUpon>RecetteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Result forms and user controls\ResultForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Result forms and user controls\ResultForm.Designer.cs">
+      <DependentUpon>ResultForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Result forms and user controls\user controls\UserControlProduction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Result forms and user controls\user controls\UserControlProduction.Designer.cs">
+      <DependentUpon>UserControlProduction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Result forms and user controls\user controls\UserControlCharges.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Result forms and user controls\user controls\UserControlCharges.Designer.cs">
+      <DependentUpon>UserControlCharges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Result forms and user controls\user controls\UserControlDefinition.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Result forms and user controls\user controls\UserControlDefinition.Designer.cs">
+      <DependentUpon>UserControlDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Result forms and user controls\user controls\UserControlExpenseIncome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Result forms and user controls\user controls\UserControlExpenseIncome.Designer.cs">
+      <DependentUpon>UserControlExpenseIncome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Result forms and user controls\user controls\UserControlExternalites.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Result forms and user controls\user controls\UserControlExternalites.Designer.cs">
+      <DependentUpon>UserControlExternalites.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Result forms and user controls\user controls\UserControlProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Result forms and user controls\user controls\UserControlProduct.Designer.cs">
+      <DependentUpon>UserControlProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Result forms and user controls\user controls\UserControlVariables.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Result forms and user controls\user controls\UserControlVariables.Designer.cs">
+      <DependentUpon>UserControlVariables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Common forms\StandardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Common forms\StandardForm.Designer.cs">
+      <DependentUpon>StandardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Common forms\TreeListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Common forms\TreeListForm.Designer.cs">
+      <DependentUpon>TreeListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other Classes\Commun.cs" />
+    <Compile Include="Data Classes\Charge.cs" />
+    <Compile Include="Data Classes\Externalite.cs" />
+    <Compile Include="Data Classes\Periode.cs" />
+    <Compile Include="Other Classes\Export.cs" />
+    <Compile Include="Forms\Display set up forms\ExitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Display set up forms\ExitForm.Designer.cs">
+      <DependentUpon>ExitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main Forms\ExploitationMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main Forms\ExploitationMainForm.Designer.cs">
+      <DependentUpon>ExploitationMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main Forms\ActivityMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main Forms\ActivityMainForm.Designer.cs">
+      <DependentUpon>ActivityMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Basics data forms\DictionnaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Basics data forms\DictionnaryForm.Designer.cs">
+      <DependentUpon>DictionnaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Basics data forms\ExternaliteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Basics data forms\ExternaliteForm.Designer.cs">
+      <DependentUpon>ExternaliteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Common forms\ListeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Common forms\ListeForm.Designer.cs">
+      <DependentUpon>ListeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Basics data forms\ProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Basics data forms\ProductForm.Designer.cs">
+      <DependentUpon>ProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Basics data forms\SystemUniteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Basics data forms\SystemUniteForm.Designer.cs">
+      <DependentUpon>SystemUniteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Basics data forms\TVAForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Basics data forms\TVAForm.Designer.cs">
+      <DependentUpon>TVAForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other Classes\Log.cs" />
+    <Compile Include="Data Classes\Produit.cs" />
+    <Compile Include="Other Classes\WriteXML.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Language\Translation.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="SQLQuery\SpecificQueryBuilder\ActivityQuery.cs" />
+    <Compile Include="SQLQuery\SpecificQueryBuilder\AleasQuery.cs" />
+    <Compile Include="SQLQuery\SpecificQueryBuilder\ChargeQuery.cs" />
+    <Compile Include="SQLQuery\SpecificQueryBuilder\CritereCultureQuery.cs" />
+    <Compile Include="SQLQuery\SpecificQueryBuilder\DictionnaryQuery.cs" />
+    <Compile Include="SQLQuery\SpecificQueryBuilder\Expense_IncomeQuery.cs" />
+    <Compile Include="SQLQuery\SpecificQueryBuilder\ExploitationQuery.cs" />
+    <Compile Include="SQLQuery\SpecificQueryBuilder\ExternaliteQuery.cs" />
+    <Compile Include="SQLQuery\SpecificQueryBuilder\FamilyQuery.cs" />
+    <Compile Include="SQLQuery\SpecificQueryBuilder\PeriodeQuery.cs" />
+    <Compile Include="SQLQuery\SpecificQueryBuilder\ProduitQuery.cs" />
+    <Compile Include="SQLQuery\SpecificQueryBuilder\ResultQuery.cs" />
+    <Compile Include="SQLQuery\SpecificQueryBuilder\TerritoryQuery.cs" />
+    <Compile Include="SQLQuery\SpecificQueryBuilder\TroupeauxQuery.cs" />
+    <Compile Include="SQLQuery\SpecificQueryBuilder\VariableQuery.cs" />
+    <Compile Include="SQLQuery\SQLQueryExecuter.cs" />
+    <Compile Include="SQLQuery\SQLQueryBuilder.cs" />
+    <Compile Include="Other Classes\XPathNav.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Forms\Basics data forms\AleasForm.resx">
+      <DependentUpon>AleasForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Common forms\CalculForm.resx">
+      <DependentUpon>CalculForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Basics data forms\ChargesForm.resx">
+      <DependentUpon>ChargesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Common forms\InfoForm.resx">
+      <DependentUpon>InfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main Forms\VarianteForm.resx">
+      <DependentUpon>VarianteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Result forms and user controls\ChargeUsedForm.resx">
+      <DependentUpon>ChargeUsedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Display set up forms\ColorForm.resx">
+      <DependentUpon>ColorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Display set up forms\ExitForm.resx">
+      <DependentUpon>ExitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main Forms\ExploitationMainForm.resx">
+      <DependentUpon>ExploitationMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main Forms\ActivityMainForm.resx">
+      <DependentUpon>ActivityMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Basics data forms\DictionnaryForm.resx">
+      <DependentUpon>DictionnaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Basics data forms\ExternaliteForm.resx">
+      <DependentUpon>ExternaliteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Basics data forms\ClassificationForm.resx">
+      <DependentUpon>ClassificationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Basics data forms\ImportGPSDataForm.resx">
+      <DependentUpon>ImportGPSDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Common forms\ListeForm.resx">
+      <DependentUpon>ListeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Common forms\NotesForm.resx">
+      <DependentUpon>NotesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Basics data forms\PeriodeForm.resx">
+      <DependentUpon>PeriodeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Basics data forms\PointGPSForm.resx">
+      <DependentUpon>PointGPSForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Basics data forms\ProductForm.resx">
+      <DependentUpon>ProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Basics data forms\RecetteForm.resx">
+      <DependentUpon>RecetteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Result forms and user controls\EtatSortieForm.resx">
+      <DependentUpon>EtatSortieForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Result forms and user controls\ResultForm.resx">
+      <DependentUpon>ResultForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Result forms and user controls\ActivityChoiceForm.resx">
+      <DependentUpon>ActivityChoiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Result forms and user controls\user controls\UserControlFinance.resx">
+      <DependentUpon>UserControlFinance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Result forms and user controls\user controls\UserControlProduction.resx">
+      <DependentUpon>UserControlProduction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Result forms and user controls\user controls\UserControlCharges.resx">
+      <DependentUpon>UserControlCharges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Result forms and user controls\user controls\UserControlDefinition.resx">
+      <DependentUpon>UserControlDefinition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Result forms and user controls\user controls\UserControlExpenseIncome.resx">
+      <DependentUpon>UserControlExpenseIncome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Result forms and user controls\user controls\UserControlExternalites.resx">
+      <DependentUpon>UserControlExternalites.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Result forms and user controls\user controls\UserControlImmoGlobal.resx">
+      <DependentUpon>UserControlImmoGlobal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Result forms and user controls\user controls\UserControlImmoPetitMateriel.resx">
+      <DependentUpon>UserControlImmoPetitMateriel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Result forms and user controls\user controls\UserControlProduct.resx">
+      <DependentUpon>UserControlProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Result forms and user controls\user controls\UserControlResultat.resx">
+      <DependentUpon>UserControlResultat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Result forms and user controls\user controls\UserControlStock.resx">
+      <DependentUpon>UserControlStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Result forms and user controls\user controls\UserControlVariables.resx">
+      <DependentUpon>UserControlVariables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Common forms\StandardForm.resx">
+      <DependentUpon>StandardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Basics data forms\SystemUniteForm.resx">
+      <DependentUpon>SystemUniteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Territory Forms\AddShapeFileForm.resx">
+      <DependentUpon>AddShapeFileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Territory Forms\CreateShapeFileForm.resx">
+      <DependentUpon>CreateShapeFileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Territory Forms\ExportForm.resx">
+      <DependentUpon>ExportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Territory Forms\FicheAttributForm.resx">
+      <DependentUpon>FicheAttributForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Territory Forms\NofileFoundForm.resx">
+      <DependentUpon>NofileFoundForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Territory Forms\PrintMapForm.resx">
+      <DependentUpon>PrintMapForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Territory Forms\QueryTerritoryForm.resx">
+      <DependentUpon>QueryTerritoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Territory Forms\RemoveShapeFIleForm.resx">
+      <DependentUpon>RemoveShapeFIleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Territory Forms\TerritoryForm.resx">
+      <DependentUpon>TerritoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Common forms\TreeListForm.resx">
+      <DependentUpon>TreeListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Basics data forms\TroupeauxForm.resx">
+      <DependentUpon>TroupeauxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Basics data forms\TVAForm.resx">
+      <DependentUpon>TVAForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Basics data forms\VariableForm.resx">
+      <DependentUpon>VariableForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Territory Forms\UserControlLigne.resx">
+      <DependentUpon>UserControlLigne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Territory Forms\UserControlQuery.resx">
+      <DependentUpon>UserControlQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Graphs\GraphForm.resx">
+      <DependentUpon>GraphForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\OMEGA.Forms.ActivityMainForm.datasource" />
+    <None Include="Properties\DataSources\OMEGA.Forms.InfoUserCharges.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxMapWinGIS">
+      <Guid>{C368D713-CC5F-40ED-9F53-F84FE197B96A}</Guid>
+      <VersionMajor>4</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="MapWinGIS">
+      <Guid>{C368D713-CC5F-40ED-9F53-F84FE197B96A}</Guid>
+      <VersionMajor>4</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nouveau-document-icone-5946-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floppy-disk-2026527_1280.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floppy-disk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\importer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fermer-gtk-icone-6139-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drapeau-grande-bretagne-uk-royaume-uni-icone-4330-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\france-icone-4359-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drapeau-allemagne-icone-5136-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drapeau-espagne-icone-8546-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-exporter-csv-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-exporter-csv-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-flèche-haut-26 -.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-flèche-bas-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-impôts-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-borne-kilométrique-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-terminal-pdv-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-blé-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-aujourd%27hui-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-dictionnaire-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-globe-terrestre-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-dernier-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-aide-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mais1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exploitation-agricole-ho-1-87-faller.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\387482-mai-commission-protection-territoire-agricole.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stickers-rose-des-vents.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modifier-le-tableau-icone-6063-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon1.0.ico" />
+    <None Include="Resources\icons8-dernier0-50.png" />
+    <None Include="Resources\icons8-dernier123-50.png" />
+    <None Include="Resources\icons8-hand-50.png" />
+    <None Include="Resources\icons8-zoom-in-50.png" />
+    <None Include="Resources\icons8-zoom-out-24.png" />
+    <None Include="Resources\icons8-zoom-out-50.png" />
+    <None Include="Resources\icons8-zoom-to-extents-50.png" />
+    <None Include="Resources\icons8-plus-48.png" />
+    <None Include="Resources\icons8-minus-48.png" />
+    <None Include="Resources\icons8-cursor-50.png" />
+    <None Include="Resources\icons8-expand-50.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\point.png" />
+    <None Include="Resources\point1.png" />
+    <None Include="Resources\curve.png" />
+    <None Include="Resources\line.png" />
+    <None Include="Resources\bars.png" />
+    <None Include="Resources\fleche-bas-telecharger-icone-5639-16.png" />
+    <None Include="Resources\fleche-bas-telecharger-icone-5639-32.png" />
+    <None Include="Resources\if_Zoom_131533.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 et x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="packages\System.Data.SQLite.Core.1.0.108.0\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('packages\System.Data.SQLite.Core.1.0.108.0\build\net46\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ce projet fait référence à des packages NuGet qui sont manquants sur cet ordinateur. Utilisez l'option de restauration des packages NuGet pour les télécharger. Pour plus d'informations, consultez http://go.microsoft.com/fwlink/?LinkID=322105. Le fichier manquant est : {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\System.Data.SQLite.Core.1.0.108.0\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\System.Data.SQLite.Core.1.0.108.0\build\net46\System.Data.SQLite.Core.targets'))" />
+  </Target>
+</Project>

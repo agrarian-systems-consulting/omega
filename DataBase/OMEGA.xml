@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<OMEGA>
+  <Langue>
+    <!--1 = Anglais, 2 = Français, 3 = Allemand, 4 = Espagnol-->
+    <Item langue="2">toto</Item>
+  </Langue>
+  <OlympeDB>
+    <Item Nom="Olympe.db" />
+  </OlympeDB>
+  <MapVillageDB>
+    <Item Nom="MapVillage.db" />
+  </MapVillageDB>
+  <Path>
+    <Item path="../OMEGA/DataBase" />
+  </Path>
+  <OMEGA_File>
+    <Item nom="" />
+  </OMEGA_File>
+</OMEGA>
